@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainGraph"
+    app:startDestination="@id/landingFragment">
+
+    <action
+        android:id="@+id/action_global_landingFragment"
+        app:destination="@id/landingFragment"
+        app:popUpTo="@id/mainGraph"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_userListFragment"
+        app:destination="@id/userListFragment"
+        app:popUpTo="@id/mainGraph" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.rishinali.rawchat.view.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.rishinali.rawchat.view.UserListFragment"
+        android:label="fragment_user_list"
+        tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:enterAnim="@anim/slide_in_from_right"
+            app:exitAnim="@anim/slide_out_to_left"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" >
+            <argument
+                android:name="FRIEND_NAME"
+                app:argType="string"
+                android:defaultValue="" />
+            <argument
+                android:name="FRIEND_ID"
+                app:argType="string"
+                android:defaultValue="" />
+
+        </action>
+        <action
+            android:id="@+id/action_userListFragment_to_authGraph"
+            app:popUpTo="@id/userListFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/authGraph"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.rishinali.rawchat.view.LandingFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_landing" >
+        <action
+            android:id="@+id/action_landingFragment_to_authGraph"
+            app:destination="@id/authGraph"
+            app:popUpTo="@id/landingFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right" />
+        <action
+            android:id="@+id/action_landingFragment_to_userListFragment"
+            app:destination="@id/userListFragment"
+            app:popUpTo="@id/landingFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_from_left"
+            app:popExitAnim="@anim/slide_out_to_right"/>
+    </fragment>
+    <include app:graph="@navigation/nav_graph_auth" />
+</navigation>

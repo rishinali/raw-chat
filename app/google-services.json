@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "352705214571",
+    "firebase_url": "https://friendlychat-a7dcf.firebaseio.com",
+    "project_id": "friendlychat-a7dcf",
+    "storage_bucket": "friendlychat-a7dcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352705214571:android:b5d75907de594a2d",
+        "android_client_info": {
+          "package_name": "com.google.firebase.codelab.friendlychat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352705214571-oe6tjp28v3h1p8doo8b4i66lmior40vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBknv28wPxKoMFSIGwedDjltSafjI-IkEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352705214571-oe6tjp28v3h1p8doo8b4i66lmior40vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352705214571:android:b302c545819f11a39bd92e",
+        "android_client_info": {
+          "package_name": "com.rishinali.rawchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352705214571-oe6tjp28v3h1p8doo8b4i66lmior40vi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBknv28wPxKoMFSIGwedDjltSafjI-IkEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352705214571-oe6tjp28v3h1p8doo8b4i66lmior40vi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
